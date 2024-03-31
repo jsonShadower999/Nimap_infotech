@@ -1,0 +1,16 @@
+GET /clients/ 
+POST /clients/
+GET /clients/:id 
+PUT-PATCH /clients/:id
+DELETE /clients/:id 
+POST projects/
+GET /projects/
+DELETE /projects/:id 
+endpoint of view  http://127.0.0.1:8000/loginuser/ ::: to see the user data with there projects enrolled for logged in user 
+
+# to start app 
+go inside projectmanagement
+use:
+cd projectmanagement
+python manage.py runserver
+
