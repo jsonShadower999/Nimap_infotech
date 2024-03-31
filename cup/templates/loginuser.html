@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login user</h1>
+    <p>Username: {{ user.username }}</p>
+    <p>password: {{user.password}}</p>
+    <p>first_name: {{user.first_name}}</p>
+    <p>created_at: {{user.created_at}}</p>
+    <p>created_by: {{user.created_by}}</p>
+   
+    <h1>User Projects</h1>
+    <ul>
+        {% for project in user_projects %}
+
+            <li><span>project name: </span>{{ project.project_name }}</li> 
+            <li><span>project creation date:  </span>{{project.created_at}}</li>
+            <li><span>project created by:  </span>{{project.created_by}}</li>
+        {% endfor %}
+    </ul>
+   
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <button type="submit">Login</button>
+    </form>
+</body>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Projects</title>
+</head>
+<body>
+    <p>Username: {{ user.username }}</p>
+    <p>password: {{user.password}}</p>
+    <p>first_name: {{user.first_name}}</p>
+    <p>created_at: {{user.created_at}}</p>
+    <p>created_by: {{user.created_by}}</p>
+   
+    <h1>User Projects</h1>
+    <ul>
+        {% for project in user_projects %}
+            <li>{{ project.project_name }}</li> 
+            <li>{{project.created_at}}</li>
+            <li>{{project.created_by}}</li>
+
+        {% endfor %}
+    </ul>
+   
+</body>
+</html>
